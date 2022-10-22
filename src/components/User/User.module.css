@@ -1,0 +1,13 @@
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 10px;
+}
+.icons img {
+  height: 40px;
+  width: 40px;
+}
+.ismail {
+  color: red;
+}
