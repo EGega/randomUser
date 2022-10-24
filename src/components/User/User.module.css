@@ -11,3 +11,18 @@
 .ismail {
   color: red;
 }
+
+.avatar:hover   {
+ cursor: pointer;
+}
+
+.btn {
+    background: rgb(9, 117, 45);
+    color: #fff;
+    font-size: 1rem;
+    padding: 5px 10px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    margin-left: 10px;
+}
