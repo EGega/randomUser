@@ -13,6 +13,7 @@ import userLocation from '../../assets/map.svg'
 import userPhone from '../../assets/phone.svg'
 import userPassword from '../../assets/padlock.svg'
 import UserDisplay from "../UserDisplay/UserDisplay"
+import SingleElement from "./SingleElement"
 
 
 const User = () => {
@@ -34,36 +35,33 @@ console.log(addedUser);
   }
 
 useEffect(() => {
-  displayHandler()
-}, [])
-
-useEffect(() => {
     submit()
     return () => {
       console.log(user);
     }
   }, [])
-  
 
  const {gender, email} = user
+ 
 return (
 !user ? <div className="wrapper">
   <Button submit={submit} /> 
 </div> : ( 
 <div className={userStyle.wrapper}>
-     <img src={user[0].picture.large} alt="" />
-       <div>
+     <img src={user[0].picture.large} className={userStyle.img} alt="" />
+       <div id="displayer-div">
           <h3 className={userStyle.gender} >{user[0].gender}</h3> 
+          {/* <SingleElement ageDisplayer={ageDisplayer} user={user} emailDisplayer={emailDisplayer} /> */}
           <h3 className={userStyle.email} >{user[0].email}</h3> 
-          <h3 className={userStyle.age} >{user[0].dob.age}</h3>   
+          <h3 className={userStyle.age} >{user[0].dob.age}</h3> 
        </div>
        <div className={userStyle.icons}>
         {gender === "female" ? <img className={userStyle.avatar} src={femaleUser} alt="" /> : <img className={userStyle.avatar} src={maleUser} alt="" />} 
         <img src={userMail} alt="" />
         {gender === "female" ? <img src={womanAge} alt="" /> : <img src={manAge} alt="" />}
         <img src={userLocation} alt="" />
-        <img src={userPhone} alt="" />
-        <img src={userPassword} alt="" />
+        <img src={userPhone}  alt="" />
+        <img src={userPassword}  alt="" />
        </div>
        <Button submit={submit} /> 
        <button onClick={displayHandler} className={userStyle.btn}>Add User</button>

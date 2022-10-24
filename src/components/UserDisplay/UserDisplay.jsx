@@ -8,7 +8,6 @@ const UserDisplay = ({addedUser, setAddedUser}) => {
         <h2>{user.gender}</h2>
         <h2>{user.email}</h2>
         </div>
-       
       })}
     
     </div>

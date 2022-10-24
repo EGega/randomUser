@@ -26,3 +26,12 @@
     border: none;
     margin-left: 10px;
 }
+.img {
+  border-radius: 50%;
+}
+.avatar:hover  .age{
+display: none;
+}
+.avatar:hover  + #displayerdiv .gender{
+display: none;
+}
