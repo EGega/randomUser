@@ -1,6 +1,8 @@
  
 const UserDisplay = ({addedUser}) => { 
   console.log(addedUser);
+  const unique = [...new Set(addedUser)];
+  console.log(unique);
   if(addedUser.length !== 0) {
     return (
       <div>
@@ -13,14 +15,13 @@ const UserDisplay = ({addedUser}) => {
       </tr>
     </thead>
     <tbody>
-    {addedUser?.map((user) => {
-          console.log(user);
+    {unique?.map((user) => {
+          console.log(user.email);
          return <tr>
              <td>{user.gender}</td>
             <td>{user.email}</td>
             <td>{user.name.title} {user.name.first} {user.name.last}</td>
           </tr>
-        
         })}
         </tbody>
   </table>
