@@ -1,7 +1,6 @@
 .icons {
   display: flex;
   justify-content: center;
-  /* flex-direction: row-reverse; */
   gap: 30px;
   margin-bottom: 10px;
 }
@@ -9,10 +8,10 @@
   height: 40px;
   width: 40px;
 }
-
-.avatar:hover   {
- cursor: pointer;
+.icons img:hover {
+  cursor: pointer;
 }
+
 
 .btn {
     background: rgb(9, 117, 45);
