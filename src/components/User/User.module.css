@@ -1,15 +1,13 @@
 .icons {
   display: flex;
   justify-content: center;
+  /* flex-direction: row-reverse; */
   gap: 30px;
   margin-bottom: 10px;
 }
 .icons img {
   height: 40px;
   width: 40px;
-}
-.ismail {
-  color: red;
 }
 
 .avatar:hover   {
@@ -29,9 +27,6 @@
 .img {
   border-radius: 50%;
 }
-.avatar:hover  .age{
-display: none;
-}
-.avatar:hover  + #displayerdiv .gender{
-display: none;
+.displayer {
+  height: 100px;
 }
